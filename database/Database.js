@@ -18,6 +18,7 @@ export const Items = [
             require('../assets/images/Pills/Astel/estella 3.jpg'),
             require('../assets/images/Pills/Astel/estella 4.jpg'),
         ],
+        30
     ),
     new Product(
     2,
@@ -34,6 +35,7 @@ export const Items = [
             require('../assets/images/Pills/Balara/belara 2.webp'),
             require('../assets/images/Pills/Balara/belara 3.jpg'),
         ],
+        28
     ),
     new Product(
     3,
@@ -50,6 +52,7 @@ export const Items = [
         require('../assets/images/Pills/Diana/diane3.jpg'),
         require('../assets/images/Pills/Diana/diane4.jpg'),
     ],
+    28
     ),
     new Product(
     4,
@@ -65,6 +68,7 @@ export const Items = [
         require('../assets/images/Pills/Minesse/minesse 3.jpg'),
         require('../assets/images/Pills/Minesse/minesse 4.jpg'),
     ],
+    30
     ),
     new Product(
     5,
@@ -81,11 +85,12 @@ export const Items = [
         require('../assets/images/AbdominalPain/Altman/Altman 4 .jpeg'),
         require('../assets/images/AbdominalPain/Altman/probiotics 3.png'),
     ],
+    20
     ),
     new Product(
     6,
     'abdominalPain',
-    'acamol',
+    'Acamol',
     300,
     '.',
     true,
@@ -97,11 +102,12 @@ export const Items = [
         require('../assets/images/AbdominalPain/acamol/acamol 2.jpg'),
         require('../assets/images/AbdominalPain/acamol/acamol 4.jpg'),
     ],
+    30
     ),
     new Product(
     7,
     'abdominalPain',
-    'calbaten forte',
+    'Calbaten forte',
     450,
     '.',
     false,
@@ -113,11 +119,12 @@ export const Items = [
         require('../assets/images/AbdominalPain/calbaten forte/calbaten forte 3.jpg'),
         require('../assets/images/AbdominalPain/calbaten forte/calbaten forte 4.jpg'),
     ],
+    29
     ),
     new Product(
     8,
     'abdominalPain',
-    'probiotics',
+    'Probiotics',
     500,
     '.',
     false,
@@ -129,11 +136,12 @@ export const Items = [
         require('../assets/images/AbdominalPain/probiotics/probiotics 3.png'),
         require('../assets/images/AbdominalPain/probiotics/probiotics 4.webp'),
     ],
+    27
     ),
     new Product(
     9,
     'backpain',
-    'bengay',
+    'Bengay',
     250,
     '.',
     true,
@@ -145,11 +153,12 @@ export const Items = [
         require('../assets/images/BackPain/bengay/bengay 3.png'),
         require('../assets/images/BackPain/bengay/bengay 4.jpg'),
     ],
+    31
     ),
     new Product(
         10,
         'backpain',
-        'perskindol',
+        'Perskindol',
         250,
         '.',
         true,
@@ -161,12 +170,13 @@ export const Items = [
             require('../assets/images/BackPain/perskindol/perskindol 3.png'),
             require('../assets/images/BackPain/perskindol/perskindol 4.jpg'),
         ],
+        30
         ),
         
     new Product(
         11,
         'backpain',
-        'traumeel',
+        'Traumeel',
         250,
         '.',
         true,
@@ -178,12 +188,13 @@ export const Items = [
             require('../assets/images/BackPain/traumeel/traumeel 3.png'),
             require('../assets/images/BackPain/traumeel/traumeel 4.webp'),
         ],
+        30
         ),
         
     new Product(
         12,
         'backpain',
-        'voltaren',
+        'Voltaren',
         250,
         '.',
         false,
@@ -195,12 +206,13 @@ export const Items = [
             require('../assets/images/BackPain/voltaren/voltaren 3.gif'),
             require('../assets/images/BackPain/voltaren/voltaren 4.jpg'),
         ],
+        30
         ),
         
     new Product(
         13,
         'headaches',
-        'acamol',
+        'Acamol',
         250,
         '.',
         true,
@@ -212,12 +224,13 @@ export const Items = [
             require('../assets/images/Headaches/acamol/acamol 3.webp'),
             require('../assets/images/Headaches/acamol/acamol 4.jpg'),
         ],
+        30
         ),
         
     new Product(
         14,
         'headaches',
-        'advil',
+        'Advil',
         250,
         '.',
         false,
@@ -229,12 +242,13 @@ export const Items = [
             require('../assets/images/Headaches/advil/advil 3.jpg'),
             require('../assets/images/Headaches/advil/advil 4.jpg'),
         ],
+        30
         ),
         
     new Product(
         15,
         'headaches',
-        'combodex',
+        'Combodex',
         250,
         '.',
         false,
@@ -246,12 +260,13 @@ export const Items = [
             require('../assets/images/Headaches/combodex/combodex 3.webp'),
             require('../assets/images/Headaches/combodex/combodex 4.jpg'),
         ],
+        30
         ),
         
     new Product(
         16,
         'headaches',
-        'optalgin',
+        'Optalgin',
         250,
         '.',
         false,
@@ -263,12 +278,13 @@ export const Items = [
             require('../assets/images/Headaches/optalgin/optalgin 3.webp'),
             require('../assets/images/Headaches/optalgin/optalgin 4.jpg'),
         ],
+        30
         ),
         
     new Product(
         17,
         'muscleAches',
-        'advil',
+        'Advil',
         250,
         '.',
         false,
@@ -280,12 +296,13 @@ export const Items = [
             require('../assets/images/MuscleAches/advil/advil 3.jpg'),
             require('../assets/images/MuscleAches/advil/advil 4.jpg'),
         ],
+        30
         ),
         
     new Product(
         18,
         'muscleAches',
-        'bengay',
+        'Bengay',
         250,
         '.',
         false,
@@ -297,12 +314,13 @@ export const Items = [
             require('../assets/images/MuscleAches/bengay/bengay 3.png'),
             require('../assets/images/MuscleAches/bengay/bengay 4.jpg'),
         ],
+        30
         ),
         
     new Product(
         19,
         'muscleAches',
-        'mega',
+        'Mega',
         250,
         '.',
         false,
@@ -314,12 +332,13 @@ export const Items = [
             require('../assets/images/MuscleAches/bengay/bengay 3.png'),
             require('../assets/images/MuscleAches/bengay/bengay 4.jpg'),
         ],
+        30
         ),
         
     new Product(
         20,
         'muscleAches',
-        'voltaren',
+        'Voltaren',
         250,
         '.',
         false,
@@ -331,39 +350,9 @@ export const Items = [
             require('../assets/images/MuscleAches/voltaren/voltaren 3.gif'),
             require('../assets/images/MuscleAches/voltaren/voltaren 4.jpg'),
         ],
+        30
         ),
 ];
 
-export const Coupons = [
 
-    {
-        id: 1,
-        name: 'coupon-1-10%',
-        Discount: 10,
-    },
-
-    {
-        id: 2,
-        name: 'coupon-2-15%',
-        Discount: 15,
-    },
-
-    {
-        id: 3,
-        name: 'coupon-3-20%',
-        Discount: 20,
-    },
-
-    {
-        id: 4,
-        name: 'coupon-4-25%',
-        Discount: 25,
-    },
-    {
-        id: 1,
-        name: '1',
-        Discount: 0.9,
-    },
-    
-]
 

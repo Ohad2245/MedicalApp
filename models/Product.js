@@ -1,5 +1,5 @@
 export default class Product{
-    constructor(id,category,productName,productPrice,descreptaion,isOff,offPercentage, productImage, isAvailable, productImageList){
+    constructor(id,category,productName,productPrice,descreptaion,isOff,offPercentage, productImage, isAvailable, productImageList,amountOfUnits){
         this.id = id;
         this.category = category;
         this.productName = productName;
@@ -9,7 +9,9 @@ export default class Product{
         this.offPercentage = offPercentage;
         this.productImage = productImage;
         this.isAvailable = isAvailable;
-        this.productImageList = productImageList
+        this.productImageList = productImageList;
+        this.amountOfUnits = amountOfUnits;
+
     }
 
 }

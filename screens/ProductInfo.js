@@ -253,7 +253,7 @@ const ProductInfo = ({ route, navigation }) => {
             <Text
               style={{
                 fontSize: 24,
-                fontWeight: "100",
+                fontWeight: "700",
                 letterSpacing: 5,
                 marginVertical: 0,
                 color: "black",
@@ -262,6 +262,7 @@ const ProductInfo = ({ route, navigation }) => {
             >
               {product.productName}
             </Text>
+
             <Ionicons
               name="link-outline"
               style={{
@@ -273,6 +274,14 @@ const ProductInfo = ({ route, navigation }) => {
               }}
             />
           </View>
+          <Text
+            style={{
+              fontWeight: "700",
+            }}
+          >
+            {product.amountOfUnits} Units per package
+          </Text>
+
           <Text
             style={{
               fontSize: 12,
@@ -325,11 +334,12 @@ const ProductInfo = ({ route, navigation }) => {
                   }}
                 />
               </View>
-              <TextInput placeholder="Address" 
-              style={{
-                border: "1px solid",
-                borderRadius:'2px'
-              }}
+              <TextInput
+                placeholder="Address"
+                style={{
+                  border: "1px solid",
+                  borderRadius: "2px",
+                }}
               />
             </View>
             <Entypo
