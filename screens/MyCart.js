@@ -12,7 +12,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Items } from "../database/Database";
 import { COLORS } from "../assets/Style";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import styles from "../assets/Style";
 
 const MyCart = ({ navigation }) => {
   const [product, setProduct] = useState();
@@ -87,7 +86,7 @@ const MyCart = ({ navigation }) => {
   const renderProducts = (data, index) => {
     return (
       <TouchableOpacity
-        key={data.key}
+        key={data.id}
         onPress={() =>
           navigation.navigate("ProductInfo", { productID: data.id })
         }

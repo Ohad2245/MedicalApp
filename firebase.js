@@ -1,6 +1,4 @@
-import { initializeApp } from "firebase/app";
-import { getAuth} from "firebase/auth";
-import 'firebase/firestore';
+import firebase from "firebase";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD2oDpOyTjWpQ6DGaejXfZyXgieiEBFOUQ",
@@ -12,30 +10,12 @@ const firebaseConfig = {
   measurementId: "G-RW6H67HL4E"
 };
 
+const app = firebase.initializeApp(firebaseConfig);
+const db = app.firestore();
+const auth = app.auth();
+const FireStore = firebase.firestore;
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+export { db,auth, FireStore};
 
 
-export const createUserDocument = async (user, additionalData) => {
-  if (!user) return;
 
-  const userRef = firestore.doc(`users/${user.uid}`);
-
-  const snapshot = await userRef.get();
-
-  if (!snapshot.exists) {
-    const { email } = user;
-    const { displayName } = additionalData;
-
-    try {
-      await userRef.set({
-        displayName,
-        email,
-        createdAt: new Date(),
-      });
-    } catch (error) {
-      console.log('Error in creating user', error);
-    }
-  }
-};
