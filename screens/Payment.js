@@ -13,17 +13,16 @@ import styles from "../assets/Style";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Items } from "../database/Database";
 import { COLORS } from "../assets/Style";
-import PaymentScreen from "./PaymentScreen";
+import PaymentScreen from "./payment/PaymentScreen";
 import { db } from "../firebase";
 
 const MyCart = ({ navigation }) => {
- 
   const [product, setProduct] = useState();
 
   const setData = async () => {
     console.log(product);
     db.collection("Orders").add({
-      products: product.map(p => ({ ...p }))
+      products: product.map((p) => ({ ...p })),
     });
   };
 
@@ -235,6 +234,7 @@ const MyCart = ({ navigation }) => {
         <View style={{ paddingHorizontal: 16 }}>
           {product ? product.map(renderProducts) : null}
         </View>
+
         <View>
           <View
             style={{
@@ -413,7 +413,7 @@ const MyCart = ({ navigation }) => {
           alignItems: "center",
         }}
       >
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={() => navigation.navigate("Succsess")}
           style={{
             width: "86%",
@@ -423,8 +423,8 @@ const MyCart = ({ navigation }) => {
             justifyContent: "center",
             alignItems: "center",
           }}
-        >
-          <Text
+        > */}
+          {/* <Text
             // onClick={(heading) => setAddData(heading)}
             // value={addData}
             // multiline={true}
@@ -438,8 +438,40 @@ const MyCart = ({ navigation }) => {
             }}
           >
             Buy {total + total / 20}$
-          </Text>
-        </TouchableOpacity>
+          </Text> */}
+
+          {/* ~~~~~~~~~~~`STRIPE AND NODEJS~~~~~~~~~~~` */}
+          {/* <button
+            onClick={() => {
+              fetch("http://localhost:3000/createCheckoutSession", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  items: [
+                    { id: 1, quantity: 3 },
+                    { id: 2, quantity: 1 },
+                  ],
+                }),
+              })
+                .then((res) => {
+                  if (res.ok) return res.json();
+                  return res.json().then((json) => Promise.reject(json));
+                })
+                .then(({ url }) => {
+                  window.location = url;
+                })
+                .catch((e) => {
+                  console.error(e.error);
+                });
+            }}
+          >
+            Buy
+          </button> */}
+          {/* ~~~~~~~~~~~~~~~~ */}
+        {/* </TouchableOpacity> */}
+        <button onClick={() =>{}}>BUY</button>
       </View>
     </View>
   );

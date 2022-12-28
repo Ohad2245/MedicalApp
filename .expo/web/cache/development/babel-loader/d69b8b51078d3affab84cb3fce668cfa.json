@@ -1,0 +1,1 @@
+{"ast":null,"code":"import CreditCard from 'rn-credit-card';","map":{"version":3,"names":["CreditCard"],"sources":["C:/Users/PC/Desktop/MedicalApp/my-app/client/screens/PaymentScreen.js"],"sourcesContent":["import CreditCard from 'rn-credit-card';\r\n"],"mappings":"AAAA,OAAOA,UAAU,MAAM,gBAAgB"},"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Alarm from 'react-native-alarm';","map":{"version":3,"names":["Alarm"],"sources":["C:/Users/PC/Desktop/MedicalApp/my-app/client/components/Authentication/cartIcons/alarm/Alarm.js"],"sourcesContent":["import Alarm from 'react-native-alarm';\r\n"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,oBAAlB"},"metadata":{},"sourceType":"module"}
