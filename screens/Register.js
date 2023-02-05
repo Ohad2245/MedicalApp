@@ -5,13 +5,12 @@ import {
   KeyboardAvoidingView,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
 import { auth } from "../firebase";
-import {GoogleAuthProvider} from "@firebase/auth";
 import firebase from "firebase/app";
+import { TextInput } from 'react-native-paper';
 
 const Register = () => {
 
@@ -57,19 +56,36 @@ const Register = () => {
   return (
     <KeyboardAvoidingView style={styles.container} behavior="padding">
       <View style={styles.inputContainer}>
-        <TextInput
+        {/* <TextInput
           placeholder="Email"
           value={email}
           onChangeText={(text) => setEmail(text)}
           style={styles.input}
-        />
+        /> */}
         <TextInput
+         label="Email"
+         value={email}
+          onChangeText={(text) => setEmail(text)}
+          style={styles.input}
+          mode='outlined'
+
+    />
+    <TextInput
+          label="Password"
+         value={password}
+         onChangeText={(text) => setPassword(text)}
+          style={styles.input}
+          secureTextEntry
+          mode='outlined'
+
+    />
+        {/* <TextInput
           placeholder="Password"
           value={password}
           onChangeText={(text) => setPassword(text)}
           style={styles.input}
           secureTextEntry
-        />
+        /> */}
       </View>
 
       <View style={styles.buttonContainer}>
@@ -101,11 +117,9 @@ const styles = StyleSheet.create({
     width: "80%",
   },
   input: {
-    backgroundColor: "white",
-    paddingHorizontal: 15,
-    paddingVertical: 10,
-    borderRadius: 10,
-    marginTop: 5,
+    borderRadius: 15,
+    marginTop: 10,
+    
   },
   buttonContainer: {
     width: "60%",
