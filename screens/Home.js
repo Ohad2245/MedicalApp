@@ -12,7 +12,7 @@ import { ScrollView } from "react-native";
 import { auth } from "../firebase";
 import { useNavigation } from "@react-navigation/core";
 
-const Home = () => {
+const Home = ({email}) => {
   const navigation = useNavigation();
 
   const handleSignOut = () => {
@@ -27,6 +27,9 @@ const Home = () => {
   return (
     <ScrollView>
       <View>
+      {auth.currentUser.email === 'ohad@gmail.com' ? (
+        <Text>Welcome Admin {auth.currentUser.email}</Text>
+      ) : <Text>Welcome {auth.currentUser.email}</Text>}
         <View
           style={{
             marginBottom: 10,
@@ -54,7 +57,7 @@ const Home = () => {
                 backgroundColor: "#EEBC1D",
                 height: 38,
                 width: 38,
-                marginLeft: 15,
+                marginLeft: 'auto',
                 cursor: "pointer",
               }}
             >

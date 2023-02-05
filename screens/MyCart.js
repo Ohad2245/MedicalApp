@@ -173,6 +173,7 @@ const MyCart = ({ navigation }) => {
                 alignItems: "center",
               }}
             >
+            
               <TouchableOpacity
                 style={{
                   borderRadius: 100,
@@ -192,6 +193,7 @@ const MyCart = ({ navigation }) => {
                   }}
                 />
               </TouchableOpacity>
+            
               <Text>{counter}</Text>
               <TouchableOpacity
                 style={{
@@ -211,7 +213,9 @@ const MyCart = ({ navigation }) => {
                     color: COLORS.backgroundDark,
                   }}
                 />
+              
               </TouchableOpacity>
+              
             </View>
             <TouchableOpacity onPress={() => removeItemFromCart(data.id)}>
               <MaterialCommunityIcons

@@ -413,7 +413,7 @@ const MyCart = ({ navigation }) => {
           alignItems: "center",
         }}
       >
-        {/* <TouchableOpacity
+        <TouchableOpacity
           onPress={() => navigation.navigate("Succsess")}
           style={{
             width: "86%",
@@ -423,8 +423,8 @@ const MyCart = ({ navigation }) => {
             justifyContent: "center",
             alignItems: "center",
           }}
-        > */}
-          {/* <Text
+        >
+          <Text
             // onClick={(heading) => setAddData(heading)}
             // value={addData}
             // multiline={true}
@@ -438,11 +438,14 @@ const MyCart = ({ navigation }) => {
             }}
           >
             Buy {total + total / 20}$
-          </Text> */}
+          </Text>
+        </TouchableOpacity>
+        {/* ~~~~~~~~~~~`STRIPE AND NODEJS~~~~~~~~~~~` */}
 
-          {/* ~~~~~~~~~~~`STRIPE AND NODEJS~~~~~~~~~~~` */}
-          {/* <button
+        {/* STRIPE */}
+        {/* <button
             onClick={() => {
+            
               fetch("http://localhost:3000/createCheckoutSession", {
                 method: "POST",
                 headers: {
@@ -450,14 +453,16 @@ const MyCart = ({ navigation }) => {
                 },
                 body: JSON.stringify({
                   items: [
+                    
                     { id: 1, quantity: 3 },
                     { id: 2, quantity: 1 },
                   ],
                 }),
               })
-                .then((res) => {
+                .then(async (res) => {
                   if (res.ok) return res.json();
-                  return res.json().then((json) => Promise.reject(json));
+                  const json = await res.json();
+                  return await Promise.reject(json);
                 })
                 .then(({ url }) => {
                   window.location = url;
@@ -468,10 +473,8 @@ const MyCart = ({ navigation }) => {
             }}
           >
             Buy
-          </button> */}
-          {/* ~~~~~~~~~~~~~~~~ */}
-        {/* </TouchableOpacity> */}
-        <button onClick={() =>{}}>BUY</button>
+          </button>  */}
+        {/* STRIPE */}
       </View>
     </View>
   );

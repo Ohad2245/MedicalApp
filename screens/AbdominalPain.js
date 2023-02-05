@@ -185,7 +185,7 @@ const AbdominalPain = ({ navigation }) => {
                   letterSpacing: 1,
                 }}
               >
-                Basketball
+                AbdominalPain
               </Text>
               <Text
                 style={{

@@ -11,12 +11,12 @@ import styles from '../assets/Style';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { auth } from '../firebase';
 
+const Pills = ({navigation,email}) =>{
 
-const Pills = ({navigation}) =>{
-   
     const [pills,setpills] = useState([]);
-    
+
     useEffect(() =>{
         const unsubscribe = navigation.addListener('focus',()=>{
             getDataFromDB()
@@ -37,10 +37,12 @@ const Pills = ({navigation}) =>{
         }
 
         setpills(pillsList);
-        
     };
-    
-    // create an product reusable card
+   
+      function removeItem(id) {
+        const newList = pills.filter((l) => l.id !== id);
+        setpills(newList);
+      }
 
      const ProductCard = ({data}) => {
          return (
@@ -88,9 +90,24 @@ const Pills = ({navigation}) =>{
                   </View>
                 )
               ): null}
+            
               <Text> {data.productPrice}$ </Text>
-             
+            
+             {auth.currentUser.email === 'ohad@gmail.com' ?(
+               <TouchableOpacity onPress={() => removeItem(data.id)}>
+              <MaterialCommunityIcons
+                name="delete-outline"
+                style={{
+                  fontSize: 23,
+                  color: "red",
+                  padding: 8,
+                  borderRadius: 100,
+                }}
+              />
+            </TouchableOpacity>):''}
+
             </TouchableOpacity>
+            
         )
     };
 
@@ -101,6 +118,7 @@ const Pills = ({navigation}) =>{
             height: '100%',
             backgroundColor:COLORS.white,
         }}>
+
             <StatusBar backgroundColor={COLORS.white} barStyle='dark-content'/>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{

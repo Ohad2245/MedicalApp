@@ -1,5 +1,6 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { useEffect, useState } from "react";
+import GoogleButton from "react-google-button";
 import {
   KeyboardAvoidingView,
   StyleSheet,
@@ -9,29 +10,14 @@ import {
   View,
 } from "react-native";
 import { auth } from "../firebase";
-import GoogleButton from "react-google-button";
-import {
-  onAuthStateChanged,
-  createUserWithEmailAndPassword,
-  signOut,
-  GoogleAuthProvider,
-  signInWithPopup 
-} from "firebase/auth";
-// import { GoogleAuthProvider } from "firebase/auth";
+import {GoogleAuthProvider} from "@firebase/auth";
+import firebase from "firebase/app";
 
 const Register = () => {
-  // const googleProvider = new GoogleAuthProvider();
 
-  // const signInWithGoogle = () => {
-  //   signInWithPopup(auth, googleProvider)
-  //     .then((res) => {
-  //       alert(`Sign Up Successful. Welcome ${res.user.email}`);
-  //     })
-  //     .catch((error) => {
-  //       alert(error.message);
-  //       return;
-  //     });
-  // };
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  const signInWithGoogle = () => auth.signInWithPopup(provider); 
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -50,7 +36,7 @@ const Register = () => {
     try {
       const user = await auth.createUserWithEmailAndPassword
       (email, password);
-      console.log("Registered With :", user.auth.email);
+      console.log("Registered With :",auth.currentUser.email);
     } catch (error) {
       console.log(error.message);
     }
@@ -62,8 +48,7 @@ const Register = () => {
         email,
         password,
       );
-      createUserDocument(user, { displayName });
-      console.log("Logged in With :", user.auth.email);
+      console.log("Logged in With :", auth.currentUser.email);
     } catch (error) {
       console.log(error.message);
     }
@@ -98,8 +83,8 @@ const Register = () => {
           <Text style={styles.buttonOutlineText}>Register</Text>
         </TouchableOpacity>
         <Text>OR</Text>
-        {/* <GoogleButton onClick={signInWithGoogle} /> */}
-      </View>
+        <GoogleButton onClick={signInWithGoogle}/>
+        </View>
     </KeyboardAvoidingView>
   );
 };
